@@ -1,0 +1,47 @@
+var nleg = [(Math.floor(Math.random(5)*5)+1),
+           (Math.floor(Math.random(5)*5)+1),
+           (Math.floor(Math.random(5)*5)+1)]
+
+var nlie = (Math.floor(Math.random(5)*5)+1);
+
+var nc = 1;
+
+var randomplus = (Math.floor(Math.random(3)*3)+1);
+
+var ng = prompt("guess xxx");
+
+var ngar = [ng[0],ng[1],ng[2]];
+
+console.log("you guess " + ngar);
+
+console.log("output is " + ((ngar[0]*nleg[0])+
+            (ngar[1]*nleg[1])+ 
+           (ngar[2]*nleg[2]) ));
+
+while (nc < 5) {
+    
+    ng = prompt("count" + (nc+1));
+    ngar = [ng[0],ng[2],ng[4]];
+    
+    console.log("you guess " + ngar);
+    if (nc == nlie)
+    {
+        console.log("output is " + 
+                ((ngar[0]*nleg[0])+
+                 (ngar[1]*nleg[1])+
+                 (ngar[2]*nleg[2])+ (randomplus)) );
+    }
+    else
+    {
+        console.log("output is " + 
+                ((ngar[0]*nleg[0])+ 
+                (ngar[1]*nleg[1])+ 
+                (ngar[2]*nleg[2])) );
+    }
+    nc++;
+}
+
+ng = prompt("guess leg");
+ngar = [ng[0],ng[2],ng[4]];
+console.log("you guess " + ngar);
+console.log("answer " + nleg.toString());
